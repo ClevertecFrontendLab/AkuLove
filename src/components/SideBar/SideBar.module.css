@@ -1,0 +1,37 @@
+body .sideBar {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body .sideBarCloseButton {
+    position: absolute;
+    top: 46.3%;
+    right: -21px;
+    width: 22px;
+    background-color: transparent;
+}
+
+@media (max-width: 900px) {
+    body .sideBarCloseButton {
+        top: 54.7%;
+    }
+}
+
+body .sideBarCloseButton:active,
+body .sideBarCloseButton:hover,
+body .sideBarCloseButton:focus {
+    background-color: transparent;
+}
+
+body .sideBarCloseButton *:active,
+body .sideBarCloseButton *:hover,
+body .sideBarCloseButton *:focus {
+    background-color: transparent;
+}
+
+body .logo {
+    padding-top: 43px;
+    padding-right: 1rem;
+    padding-bottom: 58px;
+}

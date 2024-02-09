@@ -1,0 +1,24 @@
+.sideBar,
+.sideBar div {
+    background-color: var(--gray-1);
+}
+
+body .layout {
+    width: 100%;
+    min-height: 100dvh;
+    margin: 0 auto;
+    background: url('../../../public/MainPage/Main page_light.jpg') 50% 50% / cover no-repeat;
+}
+
+body .backgroundLayout {
+    background: transparent;
+}
+
+.layout .footer {
+    margin: 0;
+    padding: 0;
+}
+
+.layout .footer {
+    background-color: transparent;
+}

@@ -5,7 +5,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import { store } from '@redux/configure-store';
 import { MainPage } from './pages/main-page/MainPage';
-import { MainLayout } from '@components/MainLayout/MainLayout';
+import { MainLayout } from '../src/layouts/MainLayout/MainLayout';
 
 import 'normalize.css';
 import './index.css';
