@@ -1,7 +1,10 @@
-body .sideBar {
-    position: relative;
-    margin: 0;
-    padding: 0;
+body .sider div {
+    display: flex;
+    flex-direction: column;
+}
+
+body .sideBarContent {
+    flex: 1 1 auto;
 }
 
 body .sideBarCloseButton {
@@ -12,9 +15,9 @@ body .sideBarCloseButton {
     background-color: transparent;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
     body .sideBarCloseButton {
-        top: 54.7%;
+        top: 46.8%;
     }
 }
 
@@ -34,4 +37,16 @@ body .logo {
     padding-top: 43px;
     padding-right: 1rem;
     padding-bottom: 58px;
+}
+
+body .exit {
+    border-top: 1px solid var(--gray-4);
+}
+
+body .exit .exitItem {
+    margin: 0;
+}
+
+body .exit .exitItem span:nth-child(2) {
+    margin-left: 25px;
 }

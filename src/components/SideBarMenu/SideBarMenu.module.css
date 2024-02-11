@@ -1,3 +1,7 @@
+body .menu {
+    height: 100%;
+}
+
 body .sideBarMenu {
     display: flex;
     flex-direction: column;

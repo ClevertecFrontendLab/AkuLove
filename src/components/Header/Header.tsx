@@ -1,4 +1,4 @@
-import { Button, Layout } from 'antd';
+import { Button, Breadcrumb, Layout } from 'antd';
 const { Header: H } = Layout;
 
 import styles from './Header.module.css';
@@ -14,9 +14,9 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ lg, md, xl }) => {
     return (
         <H className={styles.header}>
-            <Button style={{ height: 22 }} className={styles.linkButton} type='text'>
+            <Breadcrumb.Item separator={''} className={styles.breadCrumb}>
                 Главная
-            </Button>
+            </Breadcrumb.Item>
 
             <div className={styles.content}>
                 <Title level={xl ? 1 : lg ? 2 : md ? 3 : 4}>

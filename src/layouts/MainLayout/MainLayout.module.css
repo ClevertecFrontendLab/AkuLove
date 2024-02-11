@@ -10,15 +10,6 @@ body .layout {
     background: url('../../../public/MainPage/Main page_light.jpg') 50% 50% / cover no-repeat;
 }
 
-body .backgroundLayout {
+body .innerLayout {
     background: transparent;
-}
-
-.layout .footer {
-    margin: 0;
-    padding: 0;
-}
-
-.layout .footer {
-    background-color: transparent;
 }

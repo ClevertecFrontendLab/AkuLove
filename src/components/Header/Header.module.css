@@ -39,8 +39,12 @@ body .header * {
     color: var(--gray-10);
 }
 
-body .linkButton {
-    padding: 0;
-    margin-bottom: 0.5rem;
-    max-height: 22px;
+body li {
+    padding-top: 3px;
+    margin-top: 0px;
+    padding-bottom: 11px;
+}
+
+body li::marker {
+    content: '';
 }

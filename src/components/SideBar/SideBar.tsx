@@ -1,6 +1,6 @@
 import { CloseSideBarIcon } from '@components/Icons/CloseSideBar';
 import { OpenSideBarIcon } from '@components/Icons/OpenSideBar';
-import { Button, Layout } from 'antd';
+import { Button, Layout, Menu } from 'antd';
 import React from 'react';
 const { Sider } = Layout;
 
@@ -8,6 +8,7 @@ import styles from './SideBar.module.css';
 import { SideBarMenu } from '@components/SideBarMenu/SideBarMenu';
 import { SmallLogoIcon } from '@components/Icons/SmallLogo';
 import { LogoIcon } from '@components/Icons/Logo';
+import { ExitIcon } from '@components/Icons/ExitIcon';
 
 type SidebarProps = {
     sidebarWidth: number;
@@ -24,6 +25,7 @@ const SideBar: React.FC<SidebarProps> = ({ collapsed, sidebarWidth, setCollapsed
             theme='light'
             width={sidebarWidth}
             collapsedWidth={64}
+            className={styles.sider}
         >
             <div className={styles.sideBarContent}>
                 {collapsed ? (
@@ -36,6 +38,18 @@ const SideBar: React.FC<SidebarProps> = ({ collapsed, sidebarWidth, setCollapsed
                 )}
                 <SideBarMenu padding={collapsed ? '25px' : '18px'} />
             </div>
+
+            <Menu
+                className={styles.exit}
+                items={[
+                    {
+                        className: `${styles.exitItem}`,
+                        key: 'exit',
+                        icon: <ExitIcon />,
+                        label: 'Выход',
+                    },
+                ]}
+            />
             <Button
                 type='text'
                 className={styles.sideBarCloseButton}

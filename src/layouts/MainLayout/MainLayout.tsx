@@ -1,11 +1,11 @@
 import { Grid, Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
-const { Footer } = Layout;
 
 import styles from './MainLayout.module.css';
 import { useState } from 'react';
 import SideBar from '@components/SideBar/SideBar';
 import Header from '@components/Header/Header';
+import Footer from '@components/Footer/Footer';
 
 const MainLayout = () => {
     const [collapsed, setCollapsed] = useState(false);
@@ -14,17 +14,12 @@ const MainLayout = () => {
     const { md, lg, xl } = screens;
 
     return (
-        <Layout
-            className={styles.layout}
-            style={{
-                minHeight: '100vh',
-            }}
-        >
+        <Layout className={styles.layout}>
             <SideBar collapsed={collapsed} setCollapsed={setCollapsed} sidebarWidth={208} />
-            <Layout className={styles.backgroundLayout}>
+            <Layout className={styles.innerLayout}>
                 <Header lg={lg} md={md} xl={xl} />
                 <Outlet />
-                <Footer className={styles.footer}>Footer</Footer>
+                <Footer />
             </Layout>
         </Layout>
     );
