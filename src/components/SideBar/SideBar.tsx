@@ -1,6 +1,4 @@
-import { CloseSideBarIcon } from '@components/Icons/CloseSideBar';
-import { OpenSideBarIcon } from '@components/Icons/OpenSideBar';
-import { Button, Layout, Menu } from 'antd';
+import { Layout, Menu } from 'antd';
 import React from 'react';
 const { Sider } = Layout;
 
@@ -9,10 +7,7 @@ import { SideBarMenu } from '@components/SideBarMenu/SideBarMenu';
 import { FitLogoIcon } from '@components/Icons/FitLogo';
 import { LogoIcon } from '@components/Icons/Logo';
 import { ExitIcon } from '@components/Icons/ExitIcon';
-import { SmallLogoIcon } from '@components/Icons/SmallLogo';
 import { MobileSideBarMenu } from '@components/MobileSideBarMenu/MobileSideBarMenu';
-import { MobileOpenSideBarIcon } from '@components/Icons/MobileOpenSideBar';
-import { MobileCloseSideBarIcon } from '@components/Icons/MobileCloseSideBar';
 import ToggleSideBarButton from '@components/Buttons/ToggleSideBarButton/ToggleSideBarButton';
 
 type SidebarProps = {

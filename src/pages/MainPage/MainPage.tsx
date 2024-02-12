@@ -9,7 +9,7 @@ const { Text } = Typography;
 export const MainPage = () => {
     const { useBreakpoint } = Grid;
     const screens = useBreakpoint();
-    const { lg, md } = screens;
+    const { lg } = screens;
 
     return (
         <Content className={styles.main}>
