@@ -15,7 +15,12 @@ const MainLayout = () => {
 
     return (
         <Layout className={styles.layout}>
-            <SideBar collapsed={collapsed} setCollapsed={setCollapsed} sidebarWidth={208} />
+            <SideBar
+                collapsed={collapsed}
+                setCollapsed={setCollapsed}
+                sidebarWidth={md ? 208 : 106}
+                mobile={md}
+            />
             <Layout className={styles.innerLayout}>
                 <Header lg={lg} md={md} xl={xl} />
                 <Outlet />

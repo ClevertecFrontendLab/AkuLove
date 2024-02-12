@@ -6,17 +6,23 @@ const { Sider } = Layout;
 
 import styles from './SideBar.module.css';
 import { SideBarMenu } from '@components/SideBarMenu/SideBarMenu';
-import { SmallLogoIcon } from '@components/Icons/SmallLogo';
+import { FitLogoIcon } from '@components/Icons/FitLogo';
 import { LogoIcon } from '@components/Icons/Logo';
 import { ExitIcon } from '@components/Icons/ExitIcon';
+import { SmallLogoIcon } from '@components/Icons/SmallLogo';
+import { MobileSideBarMenu } from '@components/MobileSideBarMenu/MobileSideBarMenu';
+import { MobileOpenSideBarIcon } from '@components/Icons/MobileOpenSideBar';
+import { MobileCloseSideBarIcon } from '@components/Icons/MobileCloseSideBar';
+import ToggleSideBarButton from '@components/Buttons/ToggleSideBarButton/ToggleSideBarButton';
 
 type SidebarProps = {
     sidebarWidth: number;
     collapsed: boolean;
     setCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
+    mobile?: boolean;
 };
 
-const SideBar: React.FC<SidebarProps> = ({ collapsed, sidebarWidth, setCollapsed }) => {
+const SideBar: React.FC<SidebarProps> = ({ collapsed, sidebarWidth, setCollapsed, mobile }) => {
     return (
         <Sider
             trigger={null}
@@ -24,37 +30,50 @@ const SideBar: React.FC<SidebarProps> = ({ collapsed, sidebarWidth, setCollapsed
             collapsed={collapsed}
             theme='light'
             width={sidebarWidth}
-            collapsedWidth={64}
+            collapsedWidth={mobile ? 64 : 0.1}
             className={styles.sider}
         >
             <div className={styles.sideBarContent}>
-                {collapsed ? (
-                    <SmallLogoIcon
-                        style={{ paddingTop: '50px', paddingLeft: '17px' }}
-                        className={styles.logo}
-                    />
+                {collapsed && mobile ? (
+                    <FitLogoIcon className={styles.logoFit} />
                 ) : (
-                    <LogoIcon style={{ paddingLeft: '28px' }} className={styles.logo} />
+                    <LogoIcon className={styles.logo} />
                 )}
-                <SideBarMenu padding={collapsed ? '25px' : '18px'} />
+                {mobile ? (
+                    <SideBarMenu padding={collapsed ? '25px' : '18px'} />
+                ) : (
+                    <MobileSideBarMenu padding={'8px'} />
+                )}
             </div>
 
-            <Menu
-                className={styles.exit}
-                items={[
-                    {
-                        className: `${styles.exitItem}`,
-                        key: 'exit',
-                        icon: <ExitIcon />,
-                        label: 'Выход',
-                    },
-                ]}
-            />
-            <Button
-                type='text'
-                className={styles.sideBarCloseButton}
-                icon={collapsed ? <OpenSideBarIcon /> : <CloseSideBarIcon />}
-                onClick={() => setCollapsed(!collapsed)}
+            {mobile ? (
+                <Menu
+                    className={styles.exit}
+                    items={[
+                        {
+                            className: `${styles.exitItem}`,
+                            key: 'exit',
+                            icon: <ExitIcon />,
+                            label: 'Выход',
+                        },
+                    ]}
+                />
+            ) : (
+                <Menu
+                    className={styles.exit}
+                    items={[
+                        {
+                            className: `${styles.exitItem}`,
+                            key: 'exit',
+                            label: 'Выход',
+                        },
+                    ]}
+                />
+            )}
+            <ToggleSideBarButton
+                mobile={mobile}
+                setCollapsed={setCollapsed}
+                collapsed={collapsed}
             />
         </Sider>
     );

@@ -9,9 +9,27 @@ body .footer {
     padding-bottom: 46px;
 }
 
+@media (max-width: 767px) {
+    body .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0 1rem;
+        width: 100%;
+        padding-bottom: 52px;
+    }
+}
+
 body .downloads {
     background-color: #fff;
     max-width: 240px;
+}
+
+@media (max-width: 767px) {
+    body .downloads {
+        max-width: none;
+        width: 100%;
+        margin-bottom: 28px;
+    }
 }
 
 body .downloads .info {
@@ -25,6 +43,12 @@ body .downloads .info {
     margin: 0;
 }
 
+@media (max-width: 767px) {
+    body .downloads .info {
+        align-items: center;
+    }
+}
+
 body .mainInfo {
     display: flex;
     color: var(--geekblue-6);
@@ -32,6 +56,13 @@ body .mainInfo {
     padding: 0;
     height: 100%;
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    body .mainInfo {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 body .secondaryInfo {

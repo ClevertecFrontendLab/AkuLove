@@ -7,6 +7,14 @@ body .header {
     background-color: var(--geekblue-1);
 }
 
+body .header ul,
+body .header ol,
+body .header nav {
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
 body .content {
     display: flex;
     justify-content: space-between;
@@ -30,8 +38,20 @@ body .content h5 {
     body .content h3,
     body .content h4,
     body .content h5 {
+        padding-top: 3px;
         font-weight: 500;
         line-height: 31px;
+    }
+}
+
+@media (max-width: 767px) {
+    body .content h1,
+    body .content h2,
+    body .content h3,
+    body .content h4,
+    body .content h5 {
+        padding-top: 0px;
+        line-height: 25px;
     }
 }
 
@@ -42,7 +62,7 @@ body .header * {
 body li {
     padding-top: 3px;
     margin-top: 0px;
-    padding-bottom: 11px;
+    padding-bottom: 6px;
 }
 
 body li::marker {

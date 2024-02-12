@@ -1,10 +1,8 @@
-import { CalendarTwoTone, HeartFilled, TrophyFilled } from '@ant-design/icons';
-import { ProfileIcon } from '@components/Icons/ProfileIcon';
 import { Menu } from 'antd';
 
-import styles from './SideBarMenu.module.css';
+import styles from './MobileSideBarMenu.module.css';
 
-const SideBarMenu = ({ padding }: { padding: string }) => {
+const MobileSideBarMenu = ({ padding }: { padding: string }) => {
     return (
         <div className={styles.menu}>
             <Menu
@@ -14,35 +12,34 @@ const SideBarMenu = ({ padding }: { padding: string }) => {
                 items={[
                     {
                         key: 'calendar',
-                        icon: <CalendarTwoTone />,
                         label: 'Календарь',
-
                         style: {
                             paddingLeft: `${padding}`,
+                            paddingRight: `${padding}`,
                         },
                     },
                     {
                         key: 'trainings',
-                        icon: <HeartFilled />,
                         label: 'Тренировки',
                         style: {
                             paddingLeft: `${padding}`,
+                            paddingRight: `${padding}`,
                         },
                     },
                     {
                         key: 'achievements',
-                        icon: <TrophyFilled />,
                         label: 'Достижения',
                         style: {
                             paddingLeft: `${padding}`,
+                            paddingRight: `${padding}`,
                         },
                     },
                     {
                         key: 'profile',
-                        icon: <ProfileIcon />,
                         label: 'Профиль',
                         style: {
                             paddingLeft: `${padding}`,
+                            paddingRight: `${padding}`,
                         },
                     },
                 ]}
@@ -51,4 +48,4 @@ const SideBarMenu = ({ padding }: { padding: string }) => {
     );
 };
 
-export { SideBarMenu };
+export { MobileSideBarMenu };

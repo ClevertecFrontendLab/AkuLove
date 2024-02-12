@@ -14,14 +14,16 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ lg, md, xl }) => {
     return (
         <H className={styles.header}>
-            <Breadcrumb.Item separator={''} className={styles.breadCrumb}>
-                Главная
-            </Breadcrumb.Item>
+            <Breadcrumb>
+                <Breadcrumb.Item separator={''} className={styles.breadCrumb}>
+                    Главная
+                </Breadcrumb.Item>
+            </Breadcrumb>
 
             <div className={styles.content}>
                 <Title level={xl ? 1 : lg ? 2 : md ? 3 : 4}>
-                    Приветствуем тебя в CleverFit — приложении, {md ? <br /> : ''} которое поможет
-                    тебе добиться своей мечты!
+                    Приветствуем тебя {!md ? <br /> : ''} в CleverFit — приложении,{' '}
+                    {md ? <br /> : ''} которое поможет тебе добиться своей мечты!
                 </Title>
                 <Button
                     style={lg ? { minWidth: 124 } : md ? { minWidth: 105 } : { minWidth: 32 }}
