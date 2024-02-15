@@ -1,0 +1,50 @@
+body .sider {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    @media (max-width: 767px) {
+        position: fixed;
+        height: 100%;
+        z-index: 2;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 767px) {
+            overflow: hidden;
+        }
+    }
+    &__sideBarContent {
+        flex: 1 1 auto;
+    }
+
+    &__logoFit {
+        padding-top: 50px;
+        padding-bottom: 58px;
+        padding-left: 17px;
+    }
+
+    &__logo {
+        padding-top: 42px;
+        padding-right: 1rem;
+        padding-bottom: 58px;
+        padding-left: 28px;
+
+        @media (max-width: 767px) {
+            padding-top: 15px;
+            padding-bottom: 27px;
+            padding-left: 15px;
+        }
+    }
+    &__exit {
+        border-top: 1px solid var(--gray-4);
+        @media (max-width: 767px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__exitItem {
+        margin: 0;
+        span:nth-child(2) {
+            margin-left: 25px;
+        }
+    }
+}

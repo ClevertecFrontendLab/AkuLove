@@ -4,7 +4,7 @@ import { CloseSideBarIcon } from '@components/Icons/CloseSideBar';
 import { MobileOpenSideBarIcon } from '@components/Icons/MobileOpenSideBar';
 import { MobileCloseSideBarIcon } from '@components/Icons/MobileCloseSideBar';
 
-import styles from './ToggleSideBarButton.module.css';
+import styles from './ToggleSideBarButton.module.scss';
 import React from 'react';
 
 type ToggleSideBarButtonProps = {

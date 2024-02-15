@@ -1,5 +1,5 @@
 import { Button, Layout, Typography } from 'antd';
-import styles from './Footer.module.css';
+import styles from './Footer.module.scss';
 import Paragraph from 'antd/lib/typography/Paragraph';
 import { AndroidFilled, AppleFilled } from '@ant-design/icons';
 
@@ -9,17 +9,17 @@ const { Footer: F } = Layout;
 const Footer = () => {
     return (
         <F className={styles.footer}>
-            <Button className={styles.reviews} type='text'>
+            <Button className={styles.footer__reviews} type='text'>
                 Смотреть отзывы
             </Button>
-            <div className={styles.downloads}>
-                <Paragraph className={styles.info}>
-                    <Button type='link' className={styles.mainInfo}>
+            <div className={styles.footer__downloads}>
+                <Paragraph className={styles.footer__info}>
+                    <Button type='link' className={styles.footer__mainInfo}>
                         Скачать на телефон{' '}
                     </Button>
-                    <Text className={styles.secondaryInfo}>Доступно в PRO-тарифе</Text>
+                    <Text className={styles.footer__secondaryInfo}>Доступно в PRO-тарифе</Text>
                 </Paragraph>
-                <div className={styles.buttons}>
+                <div className={styles.footer__buttons}>
                     <Button icon={<AndroidFilled />} type='text'>
                         Android OS
                     </Button>

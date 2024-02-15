@@ -8,7 +8,7 @@ import { MainPage } from './pages/MainPage/MainPage';
 import { MainLayout } from '../src/layouts/MainLayout/MainLayout';
 
 import 'normalize.css';
-import './index.css';
+import './index.scss';
 import 'antd/dist/antd.css';
 
 const domNode = document.getElementById('root') as HTMLDivElement;

@@ -1,0 +1,49 @@
+body li {
+    padding-top: 3px;
+    margin-top: 0;
+    padding-bottom: 6px;
+}
+
+body li::marker {
+    content: '';
+}
+body .header * {
+    color: var(--gray-10);
+}
+
+body .header ul,
+body .header ol,
+body .header nav {
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+body .header {
+    height: auto;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    padding-top: 0.75rem;
+    line-height: normal;
+    background-color: var(--geekblue-1);
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        max-width: 1000px;
+        font-weight: 700;
+        line-height: 49px;
+        padding: 6px 0;
+        margin: 0;
+        @media (max-width: 992px) {
+            padding-top: 3px;
+            font-weight: 500;
+            line-height: 31px;
+        }
+        @media (max-width: 767px) {
+            padding-top: 0;
+            line-height: 25px;
+        }
+    }
+}

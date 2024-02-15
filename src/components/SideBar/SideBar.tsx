@@ -2,7 +2,7 @@ import { Layout, Menu } from 'antd';
 import React from 'react';
 const { Sider } = Layout;
 
-import styles from './SideBar.module.css';
+import styles from './SideBar.module.scss';
 import { SideBarMenu } from '@components/SideBarMenu/SideBarMenu';
 import { FitLogoIcon } from '@components/Icons/FitLogo';
 import { LogoIcon } from '@components/Icons/Logo';
@@ -28,11 +28,11 @@ const SideBar: React.FC<SidebarProps> = ({ collapsed, sidebarWidth, setCollapsed
             collapsedWidth={mobile ? 64 : 0.1}
             className={styles.sider}
         >
-            <div className={styles.sideBarContent}>
+            <div className={styles.sider__sideBarContent}>
                 {collapsed && mobile ? (
-                    <FitLogoIcon className={styles.logoFit} />
+                    <FitLogoIcon className={styles.sider__logoFit} />
                 ) : (
-                    <LogoIcon className={styles.logo} />
+                    <LogoIcon className={styles.sider__logo} />
                 )}
                 {mobile ? (
                     <SideBarMenu padding={collapsed ? '25px' : '18px'} />
@@ -43,10 +43,10 @@ const SideBar: React.FC<SidebarProps> = ({ collapsed, sidebarWidth, setCollapsed
 
             {mobile ? (
                 <Menu
-                    className={styles.exit}
+                    className={styles.sider__exit}
                     items={[
                         {
-                            className: `${styles.exitItem}`,
+                            className: `${styles.sider__exitItem}`,
                             key: 'exit',
                             icon: <ExitIcon />,
                             label: 'Выход',
@@ -55,10 +55,10 @@ const SideBar: React.FC<SidebarProps> = ({ collapsed, sidebarWidth, setCollapsed
                 />
             ) : (
                 <Menu
-                    className={styles.exit}
+                    className={styles.sider__exit}
                     items={[
                         {
-                            className: `${styles.exitItem}`,
+                            className: `${styles.sider__exitItem}`,
                             key: 'exit',
                             label: 'Выход',
                         },

@@ -1,0 +1,69 @@
+body .footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: transparent;
+    padding: 0 1.5rem;
+    padding-bottom: 46px;
+    @media (max-width: 767px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0 1rem;
+        width: 100%;
+        padding-bottom: 52px;
+    }
+    &__downloads {
+        background-color: #fff;
+        max-width: 240px;
+        @media (max-width: 767px) {
+            max-width: none;
+            width: 100%;
+            margin-bottom: 28px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        align-self: flex-start;
+        padding: 0.75rem 1.5rem;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--gray-4);
+        margin: 0;
+        @media (max-width: 767px) {
+            align-items: center;
+        }
+    }
+    &__mainInfo {
+        display: flex;
+        color: var(--geekblue-6);
+        font-size: 1rem;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__secondaryInfo {
+        color: var(--gray-7);
+    }
+    &__buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        button {
+            width: 100%;
+            height: 100%;
+            padding: 11px 13px;
+        }
+    }
+    &__reviews {
+        color: var(--geekblue-6);
+        font-size: 1rem;
+        line-height: 21px;
+    }
+}

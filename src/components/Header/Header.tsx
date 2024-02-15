@@ -1,7 +1,7 @@
 import { Button, Breadcrumb, Layout } from 'antd';
 const { Header: H } = Layout;
 
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 import { SettingOutlined } from '@ant-design/icons';
 import Title from 'antd/lib/typography/Title';
 
@@ -15,13 +15,13 @@ const Header: React.FC<HeaderProps> = ({ lg, md, xl }) => {
     return (
         <H className={styles.header}>
             <Breadcrumb>
-                <Breadcrumb.Item separator={''} className={styles.breadCrumb}>
+                <Breadcrumb.Item separator={''} className={styles.header__breadCrumb}>
                     Главная
                 </Breadcrumb.Item>
             </Breadcrumb>
 
-            <div className={styles.content}>
-                <Title level={xl ? 1 : lg ? 2 : md ? 3 : 4}>
+            <div className={styles.header__content}>
+                <Title className={styles.header__title} level={xl ? 1 : lg ? 2 : md ? 3 : 4}>
                     Приветствуем тебя {!md ? <br /> : ''} в CleverFit — приложении,{' '}
                     {md ? <br /> : ''} которое поможет тебе добиться своей мечты!
                 </Title>

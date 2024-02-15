@@ -2,7 +2,7 @@ import { CalendarTwoTone, HeartFilled, TrophyFilled } from '@ant-design/icons';
 import { ProfileIcon } from '@components/Icons/ProfileIcon';
 import { Menu } from 'antd';
 
-import styles from './SideBarMenu.module.css';
+import styles from './SideBarMenu.module.scss';
 
 const SideBarMenu = ({ padding }: { padding: string }) => {
     return (
@@ -10,7 +10,7 @@ const SideBarMenu = ({ padding }: { padding: string }) => {
             <Menu
                 theme='light'
                 mode='inline'
-                className={styles.sideBarMenu}
+                className={styles.menu__sideBarMenu}
                 items={[
                     {
                         key: 'calendar',

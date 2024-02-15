@@ -1,6 +1,6 @@
 import { Menu } from 'antd';
 
-import styles from './MobileSideBarMenu.module.css';
+import styles from './MobileSideBarMenu.module.scss';
 
 const MobileSideBarMenu = ({ padding }: { padding: string }) => {
     return (
@@ -8,7 +8,7 @@ const MobileSideBarMenu = ({ padding }: { padding: string }) => {
             <Menu
                 theme='light'
                 mode='inline'
-                className={styles.sideBarMenu}
+                className={styles.menu__sideBarMenu}
                 items={[
                     {
                         key: 'calendar',

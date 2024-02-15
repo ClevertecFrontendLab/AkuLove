@@ -1,0 +1,13 @@
+body .menu {
+    height: 100%;
+    &__sideBarMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    svg {
+        path {
+            fill: var(--geekblue-9);
+        }
+    }
+}
