@@ -1,0 +1,48 @@
+body .main {
+    &__item {
+        margin-bottom: 2rem;
+
+        &_submit {
+            margin-bottom: 1rem;
+        }
+
+        &_forget {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__forget {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+    }
+
+    &__forgetButton {
+        padding: 0;
+        color: var(--geekblue-6);
+        font-size: 1rem;
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+        }
+    }
+
+    &__submitButton {
+        width: 100%;
+        background-color: var(--geekblue-6);
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: -1rem;
+        }
+    }
+
+    &__google {
+        width: 100%;
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+        }
+    }
+}

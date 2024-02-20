@@ -1,0 +1,43 @@
+body .main {
+    &__item {
+        &_password {
+            margin-bottom: 2.5rem;
+            div {
+                font-size: 12px;
+            }
+        }
+
+        margin-bottom: 2rem;
+
+        &_submit {
+            margin-bottom: 1rem;
+        }
+
+        &_forget {
+            margin-bottom: 1.5rem;
+        }
+
+        &_repeat {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__submitButton {
+        width: 100%;
+        background-color: var(--geekblue-6);
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: -1rem;
+        }
+    }
+
+    &__google {
+        width: 100%;
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+        }
+    }
+}

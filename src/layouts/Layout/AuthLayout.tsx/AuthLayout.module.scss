@@ -1,0 +1,92 @@
+body .main {
+    @media (max-width: 992px) {
+        margin-top: -26px;
+    }
+
+    @media (max-width: 600px) {
+        margin-top: -6px;
+    }
+
+    &__body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: url('../../../public/AuthPage/Enter_page_light.jpg') 50% 50% / cover no-repeat;
+        backdrop-filter: blur(6px);
+        max-width: 1440px;
+        padding: 0 16px;
+    }
+
+    &__bodyBlur {
+        background-color: rgba(121, 156, 212, 0.5);
+        margin: 0 -16px;
+        min-height: 100vh;
+        backdrop-filter: blur(4px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content {
+        background-color: #fff;
+        padding: 0 85.5px;
+        width: 540px;
+        min-height: 742px;
+
+        @media (max-width: 600px) {
+            padding: 0 1rem;
+            min-height: 612px;
+            width: 328px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2.5rem;
+        padding-top: 4rem;
+
+        @media (max-width: 600px) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        svg {
+            width: 309px;
+            height: 80px;
+
+            @media (max-width: 600px) {
+                width: 203px;
+                height: 52px;
+            }
+        }
+    }
+
+    &__tabs {
+        width: 368px;
+        margin-bottom: 1.5rem;
+
+        @media (max-width: 600px) {
+            width: 296px;
+            margin-bottom: 0.5rem;
+        }
+
+        .innerTab {
+            font-size: 1rem;
+
+            @media (max-width: 600px) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+body .innerTab {
+    width: 184.5px;
+    text-align: center;
+
+    @media (max-width: 600px) {
+        width: 148px;
+    }
+}

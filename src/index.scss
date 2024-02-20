@@ -1,1 +1,18 @@
 @import 'null';
+
+body .ant-tabs-nav-list .ant-tabs-tab {
+    margin: 0;
+}
+
+body .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--geekblue-6);
+}
+
+body .ant-tabs-ink-bar {
+    background: var(--geekblue-6);
+}
+
+body .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--geekblue-6);
+    border-color: var(--geekblue-6);
+}
