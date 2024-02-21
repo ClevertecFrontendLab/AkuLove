@@ -2,6 +2,7 @@ import { Button, Checkbox, Form, Input, Grid } from 'antd';
 import styles from './AuthPage.module.scss';
 import { Link } from 'react-router-dom';
 import { GooglePlusOutlined } from '@ant-design/icons';
+import Loader from '@components/Loader/Loader';
 
 const { useBreakpoint } = Grid;
 
@@ -12,7 +13,14 @@ const AuthPage = () => {
             <Form.Item
                 className={styles.main__item}
                 name='username'
-                rules={[{ required: true, message: 'Please input your username!' }]}
+                rules={[
+                    {
+                        required: true,
+                        pattern:
+                            /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                        message: '',
+                    },
+                ]}
             >
                 <Input size='large' addonBefore={'e-mail:'} />
             </Form.Item>
@@ -20,7 +28,7 @@ const AuthPage = () => {
             <Form.Item
                 className={styles.main__item}
                 name='password'
-                rules={[{ required: true, message: 'Please input your password!' }]}
+                rules={[{ required: true, message: '' }]}
             >
                 <Input.Password size='large' placeholder='Пароль' />
             </Form.Item>

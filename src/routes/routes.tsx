@@ -3,7 +3,7 @@ import { MainPage } from '../pages/MainPage/MainPage';
 import { MainLayout } from '../layouts/MainLayout/MainLayout';
 import { paths } from './paths';
 import AuthPage from '@pages/AuthPage/AuthPage';
-import { AuthLayout } from '../layouts/Layout/AuthLayout.tsx/AuthLayout';
+import { AuthLayout } from '../layouts/AuthLayout.tsx/AuthLayout';
 import RegistrationPage from '@pages/RegistrationPage/RegistrationPage';
 
 export const routes = () => {
@@ -18,7 +18,7 @@ export const routes = () => {
                 <Route element={<MainLayout />}>
                     <Route path={paths.MAIN} element={<MainPage />} />
                 </Route>
-                <Route path='*' element={<Navigate to={paths.MAIN} />} />
+                <Route path='*' element={<Navigate to={paths.MAIN} replace />} />
             </Routes>
         </>
     );

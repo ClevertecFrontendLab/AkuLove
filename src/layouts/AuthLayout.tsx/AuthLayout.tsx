@@ -3,7 +3,7 @@ import styles from './AuthLayout.module.scss';
 import { LogoIcon } from '@components/Icons/Logo';
 import { Tabs } from 'antd';
 import { useEffect, useState } from 'react';
-import { paths } from '../../../routes/paths';
+import { paths } from '../../routes/paths';
 
 const AuthLayout = () => {
     const location = useLocation();

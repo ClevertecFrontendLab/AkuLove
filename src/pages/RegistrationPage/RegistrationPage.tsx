@@ -1,6 +1,5 @@
-import { Button, Checkbox, Form, Input, Grid } from 'antd';
+import { Button, Form, Input, Grid } from 'antd';
 import styles from './RegistrationPage.module.scss';
-import { Link } from 'react-router-dom';
 import { GooglePlusOutlined } from '@ant-design/icons';
 const { useBreakpoint } = Grid;
 
@@ -12,7 +11,14 @@ const RegistrationPage = () => {
             <Form.Item
                 className={styles.main__item}
                 name='username'
-                rules={[{ required: true, message: 'Please input your username!' }]}
+                rules={[
+                    {
+                        required: true,
+                        pattern:
+                            /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                        message: '',
+                    },
+                ]}
             >
                 <Input size='large' addonBefore={'e-mail:'} />
             </Form.Item>
@@ -21,14 +27,31 @@ const RegistrationPage = () => {
                 className={styles.main__item_password}
                 name='password'
                 help='Пароль не менее 8 символов, с заглавной буквой и цифрой'
-                rules={[{ required: true, message: 'Please input your password!' }]}
+                rules={[
+                    {
+                        required: true,
+                        pattern: /^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$/,
+                        message: 'Пароль не менее 8 символов, с заглавной буквой и цифрой',
+                    },
+                ]}
             >
                 <Input.Password size='large' placeholder='Пароль' />
             </Form.Item>
             <Form.Item
                 className={styles.main__item_repeat}
-                name='repeat password'
-                rules={[{ required: true, message: 'Please repeat your password!' }]}
+                name='confirm'
+                dependencies={['password']}
+                rules={[
+                    { required: true, message: 'Пароли не совпадают' },
+                    ({ getFieldValue }) => ({
+                        validator(_, value) {
+                            if (!value || getFieldValue('password') === value) {
+                                return Promise.resolve();
+                            }
+                            return Promise.reject(new Error('Пароли не совпадают'));
+                        },
+                    }),
+                ]}
             >
                 <Input.Password size='large' placeholder='Повторите пароль' />
             </Form.Item>
