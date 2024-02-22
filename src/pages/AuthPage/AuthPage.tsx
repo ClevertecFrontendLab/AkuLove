@@ -2,7 +2,6 @@ import { Button, Checkbox, Form, Input, Grid } from 'antd';
 import styles from './AuthPage.module.scss';
 import { Link } from 'react-router-dom';
 import { GooglePlusOutlined } from '@ant-design/icons';
-import Loader from '@components/Loader/Loader';
 
 const { useBreakpoint } = Grid;
 

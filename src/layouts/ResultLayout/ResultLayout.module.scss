@@ -1,0 +1,41 @@
+body .main {
+    @media (max-width: 992px) {
+        margin-top: -26px;
+    }
+
+    @media (max-width: 600px) {
+        margin-top: -6px;
+    }
+
+    &__body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: url('../../../public/AuthPage/Enter_page_light.jpg') 50% 50% / cover no-repeat;
+        backdrop-filter: blur(6px);
+        max-width: 1440px;
+        padding: 0 16px;
+    }
+
+    &__bodyBlur {
+        background-color: rgba(121, 156, 212, 0.5);
+        margin: 0 -16px;
+        min-height: 100vh;
+        backdrop-filter: blur(4px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content {
+        background-color: #fff;
+        padding: 0 85.5px;
+        width: 540px;
+
+        @media (max-width: 600px) {
+            padding: 0 1rem;
+            width: 328px;
+        }
+    }
+}

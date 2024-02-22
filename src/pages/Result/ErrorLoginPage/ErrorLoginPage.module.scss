@@ -1,0 +1,41 @@
+body div .error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__icon {
+        color: #faad14;
+        font-size: 70px;
+        padding-top: 4rem;
+        padding-bottom: 1.5rem;
+
+        @media (max-width: 600px) {
+            padding-top: 2rem;
+        }
+    }
+
+    &__title {
+        color: var(--gray-10);
+        margin: 0;
+        padding: 0;
+    }
+
+    &__text {
+        padding-bottom: 1.5rem;
+        line-height: 18px;
+    }
+
+    &__button {
+        width: 100%;
+        background: var(--geekblue-6);
+        line-height: 18px;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 4rem;
+
+        @media (max-width: 600px) {
+            margin-bottom: 2rem;
+        }
+    }
+}
