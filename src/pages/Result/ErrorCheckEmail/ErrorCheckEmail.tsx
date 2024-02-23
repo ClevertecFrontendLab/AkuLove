@@ -1,12 +1,12 @@
-import { CloseCircleFilled } from '@ant-design/icons';
-import styles from './ErrorPage.module.scss';
+import styles from './ErrorCheckEmail.module.scss';
 import Title from 'antd/lib/typography/Title';
 import Text from 'antd/lib/typography/Text';
 import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { paths } from '../../../routes/paths';
+import { ErrorImageIcon } from '@components/Icons/ErrorImage';
 
-const ErrorPage = () => {
+const ErrorCheckEmailPage = () => {
     const navigate = useNavigate();
 
     const returnToAuth = () => {
@@ -15,12 +15,12 @@ const ErrorPage = () => {
 
     return (
         <div className={styles.error}>
-            <CloseCircleFilled className={styles.error__icon} />
+            <ErrorImageIcon className={styles.error__icon} />
             <Title className={styles.error__title} level={3}>
-                Данные не сохранились
+                Что-то пошло не так
             </Title>
             <Text className={styles.error__text} type='secondary'>
-                Что-то пошло не так и ваша регистрация не завершилась. Попробуйте ещё раз.
+                Произошла ошибка, попробуйте отправить форму ещё раз.
             </Text>
             <Button
                 size='large'
@@ -28,10 +28,10 @@ const ErrorPage = () => {
                 className={styles.error__button}
                 type='primary'
             >
-                Повторить
+                Назад
             </Button>
         </div>
     );
 };
 
-export default ErrorPage;
+export default ErrorCheckEmailPage;

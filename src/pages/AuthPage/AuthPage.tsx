@@ -2,10 +2,16 @@ import { Button, Checkbox, Form, Input, Grid } from 'antd';
 import styles from './AuthPage.module.scss';
 import { Link } from 'react-router-dom';
 import { GooglePlusOutlined } from '@ant-design/icons';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const { useBreakpoint } = Grid;
 
 const AuthPage = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const fromPage = location.state?.from?.pathname || '/main';
+
     const { sm } = useBreakpoint();
     return (
         <Form name='basic' className={styles.main__form} autoComplete='off'>

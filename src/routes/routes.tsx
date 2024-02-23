@@ -10,6 +10,8 @@ import ErrorLoginPage from '@pages/Result/ErrorLoginPage/ErrorLoginPage';
 import SuccessPage from '@pages/Result/SuccessPage/SuccessPage';
 import ErrorUserExitPage from '@pages/Result/ErrorUserExistPage/ErrorUserExistPage';
 import ErrorPage from '@pages/Result/ErrorPage/ErrorPage';
+import ErrorEmailNoExistPage from '@pages/Result/ErrorEmailNoExistPage/ErrorEmailNoExistPage';
+import ErrorCheckEmailPage from '@pages/Result/ErrorCheckEmail/ErrorCheckEmail';
 
 export const routes = () => {
     return (
@@ -28,8 +30,9 @@ export const routes = () => {
                     <Route path={paths.ERROR} element={<ErrorPage />} />
                     <Route path={paths.ERROR_LOGIN} element={<ErrorLoginPage />} />
                     <Route path={paths.ERROR_USER_EXIST} element={<ErrorUserExitPage />} />
+                    <Route path={paths.ERROR_EMAIL_NO_EXIST} element={<ErrorEmailNoExistPage />} />
+                    <Route path={paths.ERROR_CHECK_EMAIL} element={<ErrorCheckEmailPage />} />
                 </Route>
-
                 <Route element={<MainLayout />}>
                     <Route path={paths.MAIN} element={<MainPage />} />
                 </Route>

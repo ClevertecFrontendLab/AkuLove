@@ -6,7 +6,7 @@ body div .error {
     padding: 0 85.5px;
 
     @media (max-width: 600px) {
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
 
     &__icon {
@@ -14,16 +14,17 @@ body div .error {
         font-size: 70px;
         padding-top: 4rem;
         padding-bottom: 1.5rem;
-
-        @media (max-width: 600px) {
-            padding-top: 2rem;
-        }
     }
 
     &__title {
         color: var(--gray-10);
         margin: 0;
         padding: 0;
+        white-space: nowrap;
+
+        @media (max-width: 600px) {
+            white-space: wrap;
+        }
     }
 
     &__text {
@@ -32,15 +33,10 @@ body div .error {
     }
 
     &__button {
-        width: 100%;
         background: var(--geekblue-6);
         line-height: 18px;
         font-size: 14px;
         font-weight: 400;
-        margin-bottom: 4rem;
-
-        @media (max-width: 600px) {
-            margin-bottom: 2rem;
-        }
+        margin-bottom: 56px;
     }
 }

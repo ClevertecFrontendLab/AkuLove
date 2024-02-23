@@ -1,12 +1,12 @@
 import { CloseCircleFilled } from '@ant-design/icons';
-import styles from './ErrorPage.module.scss';
+import styles from './ErrorEmailNoExistPage.module.scss';
 import Title from 'antd/lib/typography/Title';
 import Text from 'antd/lib/typography/Text';
 import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { paths } from '../../../routes/paths';
 
-const ErrorPage = () => {
+const ErrorEmailNoExistPage = () => {
     const navigate = useNavigate();
 
     const returnToAuth = () => {
@@ -17,10 +17,10 @@ const ErrorPage = () => {
         <div className={styles.error}>
             <CloseCircleFilled className={styles.error__icon} />
             <Title className={styles.error__title} level={3}>
-                Данные не сохранились
+                Такой e-mail не зарегистрирован
             </Title>
             <Text className={styles.error__text} type='secondary'>
-                Что-то пошло не так и ваша регистрация не завершилась. Попробуйте ещё раз.
+                Мы не нашли в базе вашего e-mail. Попробуйте войти с другим e-mail.
             </Text>
             <Button
                 size='large'
@@ -28,10 +28,10 @@ const ErrorPage = () => {
                 className={styles.error__button}
                 type='primary'
             >
-                Повторить
+                Попробовать снова
             </Button>
         </div>
     );
 };
 
-export default ErrorPage;
+export default ErrorEmailNoExistPage;
